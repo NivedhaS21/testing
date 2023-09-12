@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2023-09-12T10:18:22.038Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="VTErZ_3VBcUnyHdoBXJu" version="21.6.8" type="device">
+  <diagram id="kfQdSeXou_Wuq1vqvJWS" name="Page-2">
+    <mxGraphModel dx="1954" dy="1616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="AWS Cloud" StepFunction1="YamlSF" StepFunction2="StackSF" StepFunction1_RoleArn="arn:aws:iam::304657531734:role/service-role/StepFunctions-csvtest-role-d2b323ac" StepFunction2_RoleArn="arn:aws:iam::304657531734:role/service-role/StepFunctions-MyStateMachine-role-936fd28f" id="E8RPOU44EAwHNulF2D6E-3">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;dashed=0;" parent="1" vertex="1">
+            <mxGeometry x="-210" y="-352" width="610" height="572" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Region" Region="ap-south-1" Tag="sonata" id="E8RPOU44EAwHNulF2D6E-4">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#147EBA;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=1;" parent="E8RPOU44EAwHNulF2D6E-3" vertex="1">
+            <mxGeometry x="20" y="60" width="530" height="492" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="VPC" Tag="sonata" VPC-CIDR="10.0.0.0/16" Region="ap-south-1" VPCStackName="care-vpc" ResourceName="vpc" id="E8RPOU44EAwHNulF2D6E-7">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#248814;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="50" y="40" width="390" height="410" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Security group" SGI_IpProtocol="tcp" SGI_FromPort="22" SGI_ToPort="22" SGI_CidrIp="0.0.0.0/0" SGE_IpProtocol="tcp" SGE_FromPort="80" SGE_ToPort="80" SGE_CidrIp="0.0.0.0/0" SGStackName="care-SG" ResourceName="sg" id="MlPwQ5EZnl6EhqCphgu3-1">
+          <mxCell style="fillColor=none;strokeColor=#DD3522;verticalAlign=top;fontStyle=0;fontColor=#DD3522;" parent="E8RPOU44EAwHNulF2D6E-7" vertex="1">
+            <mxGeometry x="50" y="35" width="310" height="340" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Public subnet" Tag="sonata" PublicSubnet1a-CIDR="10.0.1.0/24" id="E8RPOU44EAwHNulF2D6E-8">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#248814;fillColor=#E9F3E6;verticalAlign=top;align=left;spacingLeft=30;fontColor=#248814;dashed=0;" parent="E8RPOU44EAwHNulF2D6E-7" vertex="1">
+            <mxGeometry x="60" y="60" width="140" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" ResourceName="ebs" id="E8RPOU44EAwHNulF2D6E-25">
+          <mxCell style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#4D27AA;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.internet_gateway;" parent="E8RPOU44EAwHNulF2D6E-7" vertex="1">
+            <mxGeometry x="-20" y="160" width="40" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Private subnet" Tag="sonata" PrivateSubnet1b-CIDR="10.0.3.0/24" id="Lt4la29uDgtAlJDmlJ8m-4">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="E8RPOU44EAwHNulF2D6E-7" vertex="1">
+            <mxGeometry x="220" y="60" width="130" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Availability Zone" PublicSubAmt-AZs="2" PrivateSubAmt-AZs="2" Tag="sonata" AZ="ap-south-1a" id="Lt4la29uDgtAlJDmlJ8m-6">
+          <mxCell style="fillColor=none;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#147EBA;" parent="Lt4la29uDgtAlJDmlJ8m-4" vertex="1">
+            <mxGeometry y="-69" width="130" height="439" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" BillingMode="PROVISIONED" PointInTimeRecoverySpecification="0" TableName="LewisHamilton" HashKeyElementType="S" HashKeyElementName="s8ul" WriteCapacityUnits="10" ReadCapacityUnits="5" ResourceName="DynamoDB" DynamoDBStackName="sampledynamodb" id="Lt4la29uDgtAlJDmlJ8m-5">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" parent="Lt4la29uDgtAlJDmlJ8m-4" vertex="1">
+            <mxGeometry x="20" y="42" width="68" height="68" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Lt4la29uDgtAlJDmlJ8m-9" value="DynamoDB" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Lt4la29uDgtAlJDmlJ8m-4" vertex="1">
+          <mxGeometry x="39" y="110" width="30" height="20" as="geometry" />
+        </mxCell>
+        <object label="Availability Zone" PublicSubAmt-AZs="2" PrivateSubAmt-AZs="2" Tag="sonata" AZ="ap-south-1a" id="E8RPOU44EAwHNulF2D6E-11">
+          <mxCell style="fillColor=none;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=0;fontColor=#147EBA;" parent="E8RPOU44EAwHNulF2D6E-7" vertex="1">
+            <mxGeometry x="40" y="-10" width="170" height="440" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" AccessControl="Private" BucketName="sonatabucketoftoday" ObjectLockEnabled="0" VersioningConfiguration="Enabled" OwnershipControlRule="OwnershipControlsRule" S3StackName="care-S3" ResourceName="s3" id="E8RPOU44EAwHNulF2D6E-52">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#60A337;gradientDirection=north;fillColor=#277116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="450" y="82" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Private subnet" Tag="sonata" PrivateSubnet1a-CIDR="10.0.2.0/24" id="E8RPOU44EAwHNulF2D6E-66">
+          <mxCell style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="105" y="262" width="145" height="128" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" AllocatedStorage="200" AllowMajorVersionUpgrade="0" AutoMinorVersionUpgrade="0" AvailabilityZone="ap-south-1a" CopyTagsToSnapshot="1" DBClusterIdentifier="uniquenamefordbcluster21030" DBInstanceClass="db.m5.large" DBInstanceIdentifier="uniquenamefordb21030" DBName="sampleRDS" DeleteAutomatedBackups="1" DeletionProtection="0" EnableIAMDatabaseAuthentication="0" EnablePerformanceInsights="0" Engine="mariadb" EngineVersion="10.6" Iops="3000" MasterUserPassword="sonata21030" MasterUsername="sonata" MultiAZ="0" Port="3306" PubliclyAccessible="0" SourceRegion="ap-south-1" StorageEncrypted="0" StorageType="io1" Tag="sonata" DBInstanceIdentifierForRR="uniquenameforreadreplica21030" RDSStackName="care-rds" RDSSubnetids="PrivateSubneta,PrivateSubnetb" ResourceName="rds" id="E8RPOU44EAwHNulF2D6E-49">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;" parent="E8RPOU44EAwHNulF2D6E-66" vertex="1">
+            <mxGeometry x="35" y="40.5" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="E8RPOU44EAwHNulF2D6E-68" value="RDS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="E8RPOU44EAwHNulF2D6E-66" vertex="1">
+          <mxGeometry x="40" y="98" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="E8RPOU44EAwHNulF2D6E-70" value="Intenet&lt;br&gt;&amp;nbsp;Gateway" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="18" y="235" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wdwvfVr4RJqHJ4y8pVIn-3" value="EC2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="145" y="205" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="E8RPOU44EAwHNulF2D6E-64" value="S3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="460" y="132" width="40" height="30" as="geometry" />
+        </mxCell>
+        <object label="" AvailabilityZone="ap-south-1a" KeyName="demo" Tag="sonata" EC2-OS="Linux" EC2-Type="t2.micro" AMI-Id="ami-0cca134ec43cf708f" Region="ap-south-1" Encrypted="0" Iops="3000" VolumeSize="50" VolumeType="gp3" AutoEnableIO="0" MultiAttachEnabled="0" DeviceName="/dev/sdh" EC2StackName="care-server1" EBSStackName="care-ebs" EC2-Subnet-id="PublicSubnet-a" ResourceName="ec2" id="wdwvfVr4RJqHJ4y8pVIn-1">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="140" y="142" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" WebACLName="CommonAttackProtection" WAFManualIPBlockSetName="Manual IP Block Set" SizeConstraint_ComparisonOperator="GT" SizeConstraint_TextTransformation="NONE" SizeConstraint_FieldToMatchType="BODY" SizeConstraintSize="8192" WebACL_DefaultActionType="ALLOW" WAFStackName="SampleWAF" ResourceName="WAF" id="Lt4la29uDgtAlJDmlJ8m-1">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="450" y="172" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" ActionsEnabled="1" AlarmDescription="sample description" AlarmName="sample alarm name" ComparisonOperator="GreaterThanOrEqualToThreshold" DatapointsToAlarm="1" EvaluationPeriods="1" MetricName="NumberOfObjects" Namespace="AWS/S3" Period="60" Statistic="Average" Threshold="30" TreatMissingData="missing" Unit="Count" AlarmEmail="akhil.nadendla@sonata-software.com" ResourceName="CloudWatch" CloudWatchStackName="sample-alarm-stack" id="Lt4la29uDgtAlJDmlJ8m-2">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="448" y="282" width="60" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" S3BucketName="weekndisthebest21030" TrailName="sonatatrail21030" SnsTopicName="weekndisthebest21030" OperatorEmail="akhil.nadendla@sonata-software.com" ResourceName="CloudTrail" CloudTrailStackName="sample-trail-stack" id="Lt4la29uDgtAlJDmlJ8m-3">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudtrail;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+            <mxGeometry x="450" y="382" width="58" height="58" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Lt4la29uDgtAlJDmlJ8m-12" value="WAF" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="470" y="235" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lt4la29uDgtAlJDmlJ8m-11" value="CloudWatch&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="465" y="342" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Lt4la29uDgtAlJDmlJ8m-10" value="CloudTrail" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="E8RPOU44EAwHNulF2D6E-4" vertex="1">
+          <mxGeometry x="470" y="440" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="E8RPOU44EAwHNulF2D6E-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="-225" as="sourcePoint" />
+            <mxPoint x="880" y="-192.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
