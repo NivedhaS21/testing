@@ -1,0 +1,27 @@
+ResourceType,ResourceName,Connectivity
+AWSCloud,MyCloud,
+Region,AWSRegion,
+VPC,MyVPC,
+AvailabilityZone,ap-south-1a,
+AvailabilityZone,ap-south-1b,
+AvailabilityZone,ap-south-1c,
+PublicSubnet,PublicSubnet1-a,ap-south-1a
+PublicSubnet,PublicSubnet1-b,ap-south-1b
+PublicSubnet,PublicSubnet2-a,ap-south-1a
+PublicSubnet,PublicSubnet1-c,ap-south-1c
+PrivateSubnet,PrivateSubnet1-b,ap-south-1b
+EC2,appserver,PublicSubnet1-a
+RDS,demo-rds,PrivateSubnet1-b
+EC2,webserver,PublicSubnet1-b
+EC2,dbserver,PublicSubnet1-a
+NATGateway,NAT,PublicSubnet1-b
+S3,demo-S3,
+InternalGateway,IGW,VPC
+IAM,demo-IAM,
+ElasticLoadBalancing,ALB,VPC
+Flowlogs,Flow logs,VPC
+CloudWatch,demo-CW,
+VPNGateway,VPN Gateway,
+TransitGateway,Transit Gateway,
+SiteToSiteVPN,Site-To-Site VPN,
+Users,Users,
